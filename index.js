@@ -44,8 +44,8 @@ app.delete('/api/data/:element', (req, res) => {
     const index = database.findIndex((obj) => {
         return obj.id === req.params.element
     });
-    if (index === -1) res.status(404).send('data does not exist');
-    database.split(index, 1);
+    // if (index === -1) res.status(404).send('data does not exist');
+    database.splice(index, 1);
     setTimeout(() => res.send(database), 1000);
 })
 
