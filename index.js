@@ -11,7 +11,7 @@ const database = [
         'name': 'Jaylin'
     },
     {
-        'id:': 3,
+        'id': 3,
         'name': 'Joselyn'
     }
 ];
@@ -33,11 +33,12 @@ app.post('/api/data', (req, res) => {
 
 app.put('/api/data/:element', (req, res) => {
     const index = database.findIndex((obj) => {
-        return obj.id === req.params.element
+        return obj.id === parseInt(req.params.element, 10);
     });
+    console.log(index);
     if (index === -1) res.status(404).send('data does not exist');
     database[index] = req.body;
-    setTimeout(() => res.send(database[index]), 1000);
+    setTimeout(() => res.send(database), 1000);
 })
 
 app.delete('/api/data/:element', (req, res) => {
