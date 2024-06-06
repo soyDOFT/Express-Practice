@@ -42,9 +42,10 @@ app.put('/api/data/:element', (req, res) => {
 
 app.delete('/api/data/:element', (req, res) => {
     const index = database.findIndex((obj) => {
-        return obj.id === req.params.element
+        return obj.id === parseInt(req.params.element, 10);
     });
-    // if (index === -1) res.status(404).send('data does not exist');
+    console.log(index)
+    if (index === -1) res.status(404).send('data does not exist');
     database.splice(index, 1);
     setTimeout(() => res.send(database), 1000);
 })
