@@ -1,0 +1,13 @@
+Node Questions:
+1. Node.js is a runtime environment for JavaScript written in C++ and based on Google’s v8 engine.
+   It is used to run JavaScript outside of a browser and to add more backend functionality.
+2. Hands-on practice is crucial for effective learning in Node.js so that you can better remember
+   and actually know what Node.js does firsthand.
+3. Node.js is based on a single threaded event loop and it handles client requests asynchronously.
+4. To install Node.js you must first install a version manager for node, like nvm,
+ through the nodejs.org website. Node Package Manager is important because it provides access
+ to different packages and modules to use with Node.js.
+5. The role of the JSON file in a Node.js project is to keep track of the modules 
+   for its settings, for example a list of its dependencies.
+6. HTTP modules help build server-side networking applications by enabling access to 
+   methods, like .createServer(), that handle HTTP requests and responses.
